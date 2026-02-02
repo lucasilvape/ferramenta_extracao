@@ -546,10 +546,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tabela-comparativa-de-conectores" class="md-nav__link">
+  <a href="#tabela-de-conectores" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tabela Comparativa de Conectores
+        Tabela de Conectores
       
     </span>
   </a>
@@ -932,10 +932,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tabela-comparativa-de-conectores" class="md-nav__link">
+  <a href="#tabela-de-conectores" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tabela Comparativa de Conectores
+        Tabela de Conectores
       
     </span>
   </a>
@@ -1029,16 +1029,14 @@
 </code></pre></div>
 <hr />
 <h2 id="conectores-de-banco-de-dados">🗄️ Conectores de Banco de Dados</h2>
-<div class="admonition question">
-<p class="admonition-title">Por que não usamos SQLAlchemy?</p>
-<p>O projeto utiliza <strong>drivers nativos</strong> (<code>pyodbc</code>, <code>psycopg2</code>) ao invés de um ORM como SQLAlchemy por três razões:</p>
-<ol>
-<li><strong>Performance</strong> — Conexões diretas são mais rápidas para queries de leitura massiva</li>
-<li><strong>Controle</strong> — Queries SQL puras permitem otimizações específicas por banco</li>
-<li><strong>Simplicidade</strong> — Menos camadas de abstração = menos pontos de falha</li>
-</ol>
-</div>
-<h3 id="tabela-comparativa-de-conectores">Tabela Comparativa de Conectores</h3>
+<!-- !!! question "Por que não usamos SQLAlchemy?"
+    O projeto utiliza **drivers nativos** (`pyodbc`, `psycopg2`) ao invés de um ORM como SQLAlchemy por três razões:
+
+    1. **Performance** — Conexões diretas são mais rápidas para queries de leitura massiva
+    2. **Controle** — Queries SQL puras permitem otimizações específicas por banco
+    3. **Simplicidade** — Menos camadas de abstração = menos pontos de falha -->
+
+<h3 id="tabela-de-conectores">Tabela de Conectores</h3>
 <table>
 <thead>
 <tr>
@@ -1061,14 +1059,10 @@
 <td>Dados Financeiros (Innoveo)</td>
 <td>Driver nativo de alta performance, suporte a arrays e JSON</td>
 </tr>
-<tr>
-<td><code>pymongo</code></td>
-<td>MongoDB</td>
-<td>Logs de aplicação (futuro)</td>
-<td>Flexibilidade para dados não-estruturados</td>
-</tr>
 </tbody>
 </table>
+<!-- | `pymongo` | MongoDB | Logs de aplicação (futuro) | Flexibilidade para dados não-estruturados | -->
+
 <hr />
 <h2 id="interface-grafica">🖼️ Interface Gráfica</h2>
 <pre class="mermaid"><code>flowchart TD
@@ -1087,27 +1081,16 @@
 </thead>
 <tbody>
 <tr>
-<td>Framework</td>
-<td>PySide6 (Qt 6)</td>
-<td>-</td>
-</tr>
-<tr>
-<td>Layouts</td>
-<td>Qt Designer (<code>.ui</code>)</td>
-<td><code>assets/ui_files/</code></td>
-</tr>
-<tr>
-<td>Ícones</td>
-<td>Qt Resource (<code>.qrc</code>)</td>
-<td><code>assets/qrc_files/</code></td>
-</tr>
-<tr>
-<td>Lógica</td>
-<td>Python</td>
-<td><code>src/ui/</code></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<!-- | Framework | PySide6 (Qt 6) | - | -->
+<p>| Layouts | Qt Designer (<code>.ui</code>) | <code>assets/ui_files/</code> |
+| Ícones | Qt Resource (<code>.qrc</code>) | <code>assets/qrc_files/</code> |
+| Lógica | Python | <code>src/ui/</code> |</p>
 <hr />
 <h2 id="processamento-de-dados">📊 Processamento de Dados</h2>
 <table>
@@ -1161,19 +1144,19 @@
 <td>Verifica versão do sistema no banco</td>
 </tr>
 <tr>
-<td><code>LoadProductsThread</code></td>
+<td><code>CarregarProdutosConcThread</code></td>
 <td>Carrega lista de produtos</td>
 </tr>
 <tr>
-<td><code>ReadFilesThread</code></td>
+<td><code>CarregamentoArquivosThread</code></td>
 <td>Lê arquivos Excel/CSV do usuário</td>
 </tr>
 <tr>
-<td><code>ReportThread</code></td>
+<td><code>RelatorioThread</code></td>
 <td>Gera relatórios LoteCap/Recorrência</td>
 </tr>
 <tr>
-<td><code>CyberThread</code></td>
+<td><code>ConciliacaoThread</code></td>
 <td>Executa pipeline completo de conciliação</td>
 </tr>
 <tr>
