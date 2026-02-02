@@ -652,10 +652,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sql-server-pyodbc" class="md-nav__link">
+  <a href="#sql-server" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SQL Server (pyodbc)
+        SQL Server
       
     </span>
   </a>
@@ -663,10 +663,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#postgresql-psycopg2" class="md-nav__link">
+  <a href="#postgresql" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PostgreSQL (psycopg2)
+        PostgreSQL
       
     </span>
   </a>
@@ -1011,10 +1011,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sql-server-pyodbc" class="md-nav__link">
+  <a href="#sql-server" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SQL Server (pyodbc)
+        SQL Server
       
     </span>
   </a>
@@ -1022,10 +1022,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#postgresql-psycopg2" class="md-nav__link">
+  <a href="#postgresql" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PostgreSQL (psycopg2)
+        PostgreSQL
       
     </span>
   </a>
@@ -1168,33 +1168,188 @@
 </code></pre></div>
 <hr />
 <h2 id="funcoes-de-conexao">🔌 Funções de Conexão</h2>
-<h3 id="sql-server-pyodbc">SQL Server (<code>pyodbc</code>)</h3>
-<div class="highlight"><span class="filename">src/core/database.py</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">abrir_conexao_sqlserver</span><span class="p">(</span><span class="n">ambiente</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;PRODUCAO&#39;</span><span class="p">,</span> <span class="s1">&#39;HOMOLOGACAO&#39;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Abre conexão genérica com banco de dados SQL Server (DW).&quot;&quot;&quot;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">dados</span> <span class="o">=</span> <span class="n">autenticador</span><span class="p">[</span><span class="s1">&#39;dw_bi&#39;</span><span class="p">]</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">conn_str</span> <span class="o">=</span> <span class="p">(</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="sa">f</span><span class="s2">&quot;DRIVER=</span><span class="si">{</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;driver&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">;&quot;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="sa">f</span><span class="s2">&quot;SERVER=</span><span class="si">{</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;server&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">;&quot;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="sa">f</span><span class="s2">&quot;DATABASE=</span><span class="si">{</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;database&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">;&quot;</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="sa">f</span><span class="s2">&quot;UID=</span><span class="si">{</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">;&quot;</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="sa">f</span><span class="s2">&quot;PWD=</span><span class="si">{</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">;&quot;</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="s2">&quot;TrustServerCertificate=yes&quot;</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="p">)</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="k">return</span> <span class="n">pyodbc</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">conn_str</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="postgresql-psycopg2">PostgreSQL (<code>psycopg2</code>)</h3>
-<div class="highlight"><span class="filename">src/core/database.py</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">abrir_conexao_postgres</span><span class="p">(</span><span class="n">ambiente</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;PRODUCAO&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Abre conexão com banco de dados PostgreSQL.&quot;&quot;&quot;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="n">port</span><span class="o">=</span><span class="n">port</span><span class="p">,</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="n">database</span><span class="o">=</span><span class="n">database</span><span class="p">,</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="n">password</span><span class="o">=</span><span class="n">password</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="p">)</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="k">return</span> <span class="n">conn</span>
-</code></pre></div>
+<!-- ### SQL Server (`pyodbc`) -->
+<h3 id="sql-server">SQL Server</h3>
+<!-- ```python title="src/core/database.py"
+def abrir_conexao_sqlserver(ambiente: Literal['PRODUCAO', 'HOMOLOGACAO']) -> Any:
+    """Abre conexão genérica com banco de dados SQL Server (DW)."""
+    try:
+        if ambiente == 'PRODUCAO':
+            dados = autenticador['dw_bi']
+        elif ambiente == 'HOMOLOGACAO':
+            # Implementar lógica se necessário
+            raise ValueError("Homologação não configurada")
+        else:
+            raise ValueError('Selecione PRODUCAO ou HOMOLOGACAO')
+
+        conn_str = (
+            f"DRIVER={dados['driver']};"
+            f"SERVER={dados['server']};"
+            f"DATABASE={dados['database']};"
+            f"UID={dados['user']};"
+            f"PWD={dados['password']};"
+            "TrustServerCertificate=yes"
+        )
+        print("Conectado ao banco de dados SQL Server")
+        return pyodbc.connect(conn_str)
+
+    except Exception as e:
+        print(f"[ERRO] Falha na conexão SQL Server: {e}")
+        raise
+``` -->
+<details class="example">
+<summary>abrir_conexao_sqlserver(ambiente)</summary>
+<p>Abre conexão genérica com banco de dados SQL Server (DW).</p>
+<p><strong>Assinatura:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">abrir_conexao_sqlserver</span><span class="p">(</span><span class="n">ambiente</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;PRODUCAO&#39;</span><span class="p">,</span> <span class="s1">&#39;HOMOLOGACAO&#39;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Any</span>
+</code></pre></div></p>
+<p><strong>Funcionalidades:</strong></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span> Suporte a múltiplos ambientes (Produção e Homologação)</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span> Autenticação via variáveis de ambiente</li>
+</ul>
+<p><strong>Parâmetros:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ambiente</code></td>
+<td><code>Literal['PRODUCAO', 'HOMOLOGACAO']</code></td>
+<td>Ambiente de destino</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Retorna:</strong> <code>Any</code> (conexão pyodbc)</p>
+<p><strong>Exemplo:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">abrir_conexao_sqlserver</span><span class="p">(</span><span class="n">ambiente</span><span class="o">=</span><span class="s1">&#39;PRODUCAO&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># ... operações ...</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></p>
+<p><strong>Implementação:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">abrir_conexao_sqlserver</span><span class="p">(</span><span class="n">ambiente</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;PRODUCAO&#39;</span><span class="p">,</span> <span class="s1">&#39;HOMOLOGACAO&#39;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Abre conexão genérica com banco de dados SQL Server (DW).&quot;&quot;&quot;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="k">if</span> <span class="n">ambiente</span> <span class="o">==</span> <span class="s1">&#39;PRODUCAO&#39;</span><span class="p">:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>            <span class="n">dados</span> <span class="o">=</span> <span class="n">autenticador</span><span class="p">[</span><span class="s1">&#39;dw_bi&#39;</span><span class="p">]</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="k">elif</span> <span class="n">ambiente</span> <span class="o">==</span> <span class="s1">&#39;HOMOLOGACAO&#39;</span><span class="p">:</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>            <span class="c1"># Implementar lógica se necessário</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Homologação não configurada&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Selecione PRODUCAO ou HOMOLOGACAO&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="n">conn_str</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>            <span class="sa">f</span><span class="s2">&quot;DRIVER=</span><span class="si">{</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;driver&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">;&quot;</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>            <span class="sa">f</span><span class="s2">&quot;SERVER=</span><span class="si">{</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;server&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">;&quot;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>            <span class="sa">f</span><span class="s2">&quot;DATABASE=</span><span class="si">{</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;database&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">;&quot;</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>            <span class="sa">f</span><span class="s2">&quot;UID=</span><span class="si">{</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">;&quot;</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>            <span class="sa">f</span><span class="s2">&quot;PWD=</span><span class="si">{</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">;&quot;</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>            <span class="s2">&quot;TrustServerCertificate=yes&quot;</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        <span class="p">)</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Conectado ao banco de dados SQL Server&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>        <span class="k">return</span> <span class="n">pyodbc</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">conn_str</span><span class="p">)</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERRO] Falha na conexão SQL Server: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>        <span class="k">raise</span>
+</code></pre></div></p>
+</details>
+<!-- ### PostgreSQL (`psycopg2`) -->
+<h3 id="postgresql">PostgreSQL</h3>
+<!-- ```python title="src/core/database.py"
+def abrir_conexao_postgres(ambiente: str = 'PRODUCAO') -> Any:
+    """Abre conexão com banco de dados PostgreSQL."""
+    try:        
+        if ambiente == 'PRODUCAO':
+            host = "xxxxxxxx"  
+            port = xxxxxx
+            database = "xxxxxx"  
+            user = "xxxxxx"  
+            password = 'xxxxxx'  
+        else:
+            raise ValueError("Ambiente desconhecido para Postgres")
+
+        # print("Conectado ao banco de dados Postgres")
+        conn = psycopg2.connect(
+            host=host,
+            port=port,
+            database=database,
+            user=user,
+            password=password
+        )
+        return conn
+
+    except Exception as e:
+        print(f"[ERRO] Falha na conexão Postgres: {e}")
+        raise
+``` -->
+<details class="example">
+<summary>abrir_conexao_postgres(ambiente)</summary>
+<p>Abre conexão com banco de dados PostgreSQL.</p>
+<p><strong>Assinatura:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">abrir_conexao_postgres</span><span class="p">(</span><span class="n">ambiente</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;PRODUCAO&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span>
+</code></pre></div></p>
+<p><strong>Funcionalidades:</strong></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span> Suporte ao ambiente de produção</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span> Autenticação via variáveis de ambiente</li>
+</ul>
+<p><strong>Parâmetros:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ambiente</code></td>
+<td><code>str</code></td>
+<td>Ambiente de destino (ex: 'PRODUCAO')</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Retorna:</strong> <code>Any</code> (conexão psycopg2)</p>
+<p><strong>Exemplo:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">abrir_conexao_postgres</span><span class="p">(</span><span class="n">ambiente</span><span class="o">=</span><span class="s1">&#39;PRODUCAO&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># ... operações ...</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></p>
+<p><strong>Implementação:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">abrir_conexao_postgres</span><span class="p">(</span><span class="n">ambiente</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;PRODUCAO&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Abre conexão com banco de dados PostgreSQL.&quot;&quot;&quot;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="k">try</span><span class="p">:</span>        
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        <span class="k">if</span> <span class="n">ambiente</span> <span class="o">==</span> <span class="s1">&#39;PRODUCAO&#39;</span><span class="p">:</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>            <span class="n">host</span> <span class="o">=</span> <span class="s2">&quot;xxxxxxxx&quot;</span>  
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>            <span class="n">port</span> <span class="o">=</span> <span class="n">xxxxxx</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>            <span class="n">database</span> <span class="o">=</span> <span class="s2">&quot;xxxxxx&quot;</span>  
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>            <span class="n">user</span> <span class="o">=</span> <span class="s2">&quot;xxxxxx&quot;</span>  
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>            <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;xxxxxx&#39;</span>  
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Ambiente desconhecido para Postgres&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>        <span class="c1"># print(&quot;Conectado ao banco de dados Postgres&quot;)</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>        <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>            <span class="n">host</span><span class="o">=</span><span class="n">host</span><span class="p">,</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>            <span class="n">port</span><span class="o">=</span><span class="n">port</span><span class="p">,</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>            <span class="n">database</span><span class="o">=</span><span class="n">database</span><span class="p">,</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>            <span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">,</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>            <span class="n">password</span><span class="o">=</span><span class="n">password</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>        <span class="p">)</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>        <span class="k">return</span> <span class="n">conn</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[ERRO] Falha na conexão Postgres: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>        <span class="k">raise</span>
+</code></pre></div></p>
+</details>
 <hr />
 <h2 id="sistema-de-permissoes">🛡️ Sistema de Permissões</h2>
 <p>O módulo também gerencia o controle de acesso dos usuários.</p>
@@ -1226,25 +1381,25 @@
 </tbody>
 </table>
 <h3 id="funcoes-disponiveis">Funções Disponíveis</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Verificar se usuário existe</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">database</span><span class="o">.</span><span class="n">usuario_existe</span><span class="p">(</span><span class="s1">&#39;Lucas.Silva&#39;</span><span class="p">)</span>  <span class="c1"># True/False</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Cadastrar novo usuário (todas as páginas bloqueadas)</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">database</span><span class="o">.</span><span class="n">cadastrar_usuario_novo</span><span class="p">(</span><span class="s1">&#39;Novo.Usuario&#39;</span><span class="p">)</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Obter permissões</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">permissoes</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="n">obter_permissoes_usuario</span><span class="p">(</span><span class="s1">&#39;Lucas.Silva&#39;</span><span class="p">)</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1"># {&#39;home&#39;: True, &#39;financeiro&#39;: True, &#39;conciliacao&#39;: False, ...}</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1"># Atualizar permissão individual</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="n">database</span><span class="o">.</span><span class="n">atualizar_permissao_pagina</span><span class="p">(</span><span class="s1">&#39;Lucas.Silva&#39;</span><span class="p">,</span> <span class="s1">&#39;Conciliacao&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c1"># Atualizar múltiplas permissões</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="n">database</span><span class="o">.</span><span class="n">atualizar_multiplas_permissoes</span><span class="p">(</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="s1">&#39;Lucas.Silva&#39;</span><span class="p">,</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="p">[</span><span class="s1">&#39;Financeiro&#39;</span><span class="p">,</span> <span class="s1">&#39;Conciliacao&#39;</span><span class="p">,</span> <span class="s1">&#39;Home&#39;</span><span class="p">],</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    <span class="n">liberado</span><span class="o">=</span><span class="kc">True</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Verificar se usuário existe</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">database</span><span class="o">.</span><span class="n">usuario_existe</span><span class="p">(</span><span class="s1">&#39;Lucas.Silva&#39;</span><span class="p">)</span>  <span class="c1"># True/False</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Cadastrar novo usuário (todas as páginas bloqueadas)</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">database</span><span class="o">.</span><span class="n">cadastrar_usuario_novo</span><span class="p">(</span><span class="s1">&#39;Novo.Usuario&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># Obter permissões</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">permissoes</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="n">obter_permissoes_usuario</span><span class="p">(</span><span class="s1">&#39;Lucas.Silva&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1"># {&#39;home&#39;: True, &#39;financeiro&#39;: True, &#39;conciliacao&#39;: False, ...}</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="c1"># Atualizar permissão individual</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="n">database</span><span class="o">.</span><span class="n">atualizar_permissao_pagina</span><span class="p">(</span><span class="s1">&#39;Lucas.Silva&#39;</span><span class="p">,</span> <span class="s1">&#39;Conciliacao&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="c1"># Atualizar múltiplas permissões</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="n">database</span><span class="o">.</span><span class="n">atualizar_multiplas_permissoes</span><span class="p">(</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    <span class="s1">&#39;Lucas.Silva&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="p">[</span><span class="s1">&#39;Financeiro&#39;</span><span class="p">,</span> <span class="s1">&#39;Conciliacao&#39;</span><span class="p">,</span> <span class="s1">&#39;Home&#39;</span><span class="p">],</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>    <span class="n">liberado</span><span class="o">=</span><span class="kc">True</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="sistema-de-logs">📝 Sistema de Logs</h2>
@@ -1291,22 +1446,22 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">database</span><span class="o">.</span><span class="n">inserir_log_sistema_relatorio</span><span class="p">(</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">usuario</span><span class="o">=</span><span class="s1">&#39;Lucas.Silva&#39;</span><span class="p">,</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">tipo_relatorio</span><span class="o">=</span><span class="s1">&#39;Recorrência&#39;</span><span class="p">,</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">nm_produto</span><span class="o">=</span><span class="s1">&#39;CYBER&#39;</span><span class="p">,</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">competencia</span><span class="o">=</span><span class="s1">&#39;202501&#39;</span><span class="p">,</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">tempo_execucao</span><span class="o">=</span><span class="mf">45.32</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">database</span><span class="o">.</span><span class="n">inserir_log_sistema_relatorio</span><span class="p">(</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">usuario</span><span class="o">=</span><span class="s1">&#39;Lucas.Silva&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="n">tipo_relatorio</span><span class="o">=</span><span class="s1">&#39;Recorrência&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="n">nm_produto</span><span class="o">=</span><span class="s1">&#39;CYBER&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">competencia</span><span class="o">=</span><span class="s1">&#39;202501&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="n">tempo_execucao</span><span class="o">=</span><span class="mf">45.32</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="controle-de-versao">🔄 Controle de Versão</h2>
 <p>O sistema verifica automaticamente se há uma versão mais recente disponível.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Consultar versão atual no banco</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">versao</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="n">consultar_versao_sistema</span><span class="p">()</span>  <span class="c1"># &#39;1.0.1&#39;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Inserir nova versão (admin)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">database</span><span class="o">.</span><span class="n">inserir_versao_sistema</span><span class="p">(</span><span class="s1">&#39;1.0.2&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Consultar versão atual no banco</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">versao</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="n">consultar_versao_sistema</span><span class="p">()</span>  <span class="c1"># &#39;1.0.1&#39;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Inserir nova versão (admin)</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">database</span><span class="o">.</span><span class="n">inserir_versao_sistema</span><span class="p">(</span><span class="s1">&#39;1.0.2&#39;</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Auto-atualização</p>
