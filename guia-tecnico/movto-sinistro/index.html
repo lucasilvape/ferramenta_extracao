@@ -1364,7 +1364,7 @@
 </tbody>
 </table>
 <p>A thread recebe o <code>DataFrame</code> lido, o tipo de importação (<code>int</code>) e o ambiente (<code>str</code>), executa a validação e persistência nos dados e emite o sinal correspondente ao resultado.</p>
-<hr />
+<p>&lt;!-- ---</p>
 <h2 id="controle-de-estado-dos-botoes">🛡️ Controle de Estado dos Botões</h2>
 <table>
 <thead>
@@ -1396,7 +1396,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">atualizar_botoes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">habilitar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ambiente</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_tipo_importacao</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_export_layout</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">habilitar</span><span class="p">)</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_import_layout</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">habilitar</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_import_layout</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">habilitar</span><span class="p">)</span> <span class="o">--&gt;</span>
 </code></pre></div>
 <hr />
 <h2 id="log-de-execucao">📝 Log de Execução</h2>

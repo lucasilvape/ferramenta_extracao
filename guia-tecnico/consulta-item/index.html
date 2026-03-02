@@ -818,17 +818,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controle-de-estado-dos-widgets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛡️ Controle de Estado dos Widgets
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#log-de-execucao" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1085,17 +1074,6 @@
     <span class="md-ellipsis">
       
         🧵 Thread: ConsultaApoliceThread
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#controle-de-estado-dos-widgets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛡️ Controle de Estado dos Widgets
       
     </span>
   </a>
@@ -1365,58 +1343,20 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="controle-de-estado-dos-widgets">🛡️ Controle de Estado dos Widgets</h2>
-<table>
-<thead>
-<tr>
-<th>Situação</th>
-<th style="text-align: center;"><code>rb_homolog</code></th>
-<th style="text-align: center;"><code>rb_prod</code></th>
-<th style="text-align: center;"><code>btn_consultar</code></th>
-<th style="text-align: center;"><code>btn_limpar</code></th>
-<th style="text-align: center;"><code>btn_gerar</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Nenhum campo preenchido</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
-</tr>
-<tr>
-<td>Campo preenchido</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌</td>
-</tr>
-<tr>
-<td>Consulta concluída</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr>
-<td>Durante consulta</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Radio de Homologação Travado</p>
-<p>O método <code>travar_homolog()</code> pode desabilitar o <code>rb_homolog</code> em cenários específicos (e.g., limite de acesso ao ambiente de homologação). O método <code>destravar_homolog()</code> o reabilita caso existam campos preenchidos.</p>
-</div>
+<!-- ---
+
+## 🛡️ Controle de Estado dos Widgets
+
+| Situação | `rb_homolog` | `rb_prod` | `btn_consultar` | `btn_limpar` | `btn_gerar` |
+|----------|:---:|:---:|:---:|:---:|:---:|
+| Nenhum campo preenchido | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Campo preenchido | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Consulta concluída | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Durante consulta | ✅ | ✅ | ❌ | ✅ | ❌ |
+
+!!! note "Radio de Homologação Travado"
+    O método `travar_homolog()` pode desabilitar o `rb_homolog` em cenários específicos (e.g., limite de acesso ao ambiente de homologação). O método `destravar_homolog()` o reabilita caso existam campos preenchidos. -->
+
 <hr />
 <h2 id="log-de-execucao">📝 Log de Execução</h2>
 <p>Após cada consulta bem-sucedida, um log é gravado automaticamente:</p>

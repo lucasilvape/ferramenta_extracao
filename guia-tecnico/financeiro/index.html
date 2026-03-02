@@ -762,17 +762,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controle-de-estado-dos-botoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛡️ Controle de Estado dos Botões
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#log-de-execucao" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1092,17 +1081,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controle-de-estado-dos-botoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛡️ Controle de Estado dos Botões
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#log-de-execucao" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1364,51 +1342,20 @@
 </tbody>
 </table>
 <p>Para detalhes de implementação das threads, consulte <a href="../processamento-e-threads/#4-consultathread">Processamento &amp; Threads</a>.</p>
-<hr />
-<h2 id="controle-de-estado-dos-botoes">🛡️ Controle de Estado dos Botões</h2>
-<table>
-<thead>
-<tr>
-<th>Situação</th>
-<th style="text-align: center;"><code>btn_consultar</code></th>
-<th style="text-align: center;"><code>btn_gerar_relatorio</code></th>
-<th style="text-align: center;"><code>btn_limpar</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Nenhum tipo selecionado</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
-</tr>
-<tr>
-<td>Modo Consulta (campos vazios)</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
-</tr>
-<tr>
-<td>Modo Consulta (campo preenchido)</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr>
-<td>Modo LoteCap (produto selecionado)</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr>
-<td>Modo Recorrência (produto + data)</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-</tr>
-</tbody>
-</table>
-<p>A lógica é centralizada em <code>atualizar_botao_gerar()</code>, acionada pelos sinais <code>currentTextChanged</code> e <code>textChanged</code> de todos os campos de filtro.</p>
+<!-- ---
+
+## 🛡️ Controle de Estado dos Botões
+
+| Situação | `btn_consultar` | `btn_gerar_relatorio` | `btn_limpar` |
+|----------|:---:|:---:|:---:|
+| Nenhum tipo selecionado | ❌ | ❌ | ❌ |
+| Modo Consulta (campos vazios) | ✅ | ❌ | ❌ |
+| Modo Consulta (campo preenchido) | ✅ | ✅ | ✅ |
+| Modo LoteCap (produto selecionado) | ❌ | ✅ | ✅ |
+| Modo Recorrência (produto + data) | ❌ | ✅ | ✅ |
+
+A lógica é centralizada em `atualizar_botao_gerar()`, acionada pelos sinais `currentTextChanged` e `textChanged` de todos os campos de filtro. -->
+
 <hr />
 <h2 id="log-de-execucao">📝 Log de Execução</h2>
 <p>Cada relatório gerado ou consulta realizada registra um log automaticamente. Consulte <a href="../banco-de-dados/#sistema-de-logs">Banco de Dados</a> para detalhes da tabela <code>logs_sistema_relatorios</code>.</p>
