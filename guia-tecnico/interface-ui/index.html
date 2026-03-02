@@ -16,7 +16,7 @@
         <link rel="prev" href="../processamento-e-threads/">
       
       
-        <link rel="next" href="../../operacao/compilacao/">
+        <link rel="next" href="../financeiro/">
       
       
         
@@ -818,6 +818,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#splashscreen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🖼️ SplashScreen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#importante" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -832,6 +843,118 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../financeiro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Financeiro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conciliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conciliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../consulta-item/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consulta Item
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../movto-sinistro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Movto Sinistro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1137,6 +1260,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#splashscreen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🖼️ SplashScreen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#importante" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1172,20 +1306,16 @@
 <hr />
 <h2 id="estrutura-de-arquivos">📁 Estrutura de Arquivos</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>assets/
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── icons/                    # Imagens e ícones (PNG, SVG)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── icons/                               # Imagens e ícones (PNG, SVG)
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── qrc_files/
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   └── icons_.qrc           # Manifesto de recursos Qt
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   └── icons_.qrc                      # Manifesto de recursos Qt
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>└── ui_files/
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    ├── main_window_v1.ui    # Layout principal
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    ├── main_window_v2.ui    # Versão alternativa
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    └── tela_escura_v1.ui    # Tema escuro
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>src/ui/
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├── __init__.py
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>├── icons_rc.py              # Recursos compilados (gerado)
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>├── main_window.py           # Wrapper de importação
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>├── main_window_v1.py        # UI compilada (gerado)
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>└── main_window_v2.py        # UI compilada (gerado)
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    └── main_window_movto_sinistro.ui   ✅ Layout principal ativo
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>src/ui/
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── __init__.py
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├── icons_rc.py                         # Recursos compilados (gerado)
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>└── main_window_movto_sinistro.py       ✅ UI compilada — arquivo oficial (gerado)
 </code></pre></div>
 <hr />
 <h2 id="fluxo-de-conversao">🔄 Fluxo de Conversão</h2>
@@ -1206,12 +1336,10 @@
 <p>Todos os comandos assumem que você está na pasta raiz do projeto.</p>
 </div>
 <h3 id="converter-layouts-ui-py">Converter Layouts (<code>.ui</code> → <code>.py</code>)</h3>
-<div class="highlight"><span class="filename">Converter tela principal</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pyside6-uic<span class="w"> </span>assets<span class="se">\u</span>i_files<span class="se">\m</span>ain_window_v1.ui<span class="w"> </span>-o<span class="w"> </span>src<span class="se">\u</span>i<span class="se">\m</span>ain_window_v1.py
-</code></pre></div>
-<div class="highlight"><span class="filename">Converter tela escura</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pyside6-uic<span class="w"> </span>assets<span class="se">\u</span>i_files<span class="se">\t</span>ela_escura_v1.ui<span class="w"> </span>-o<span class="w"> </span>src<span class="se">\u</span>i<span class="se">\u</span>i_main_tela_escura_v1.py
+<div class="highlight"><span class="filename">Converter layout principal</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pyside6-uic<span class="w"> </span>assets<span class="se">\u</span>i_files<span class="se">\m</span>ain_window_movto_sinistro.ui<span class="w"> </span>-o<span class="w"> </span>src<span class="se">\u</span>i<span class="se">\m</span>ain_window_movto_sinistro.py
 </code></pre></div>
 <h3 id="converter-recursos-qrc-py">Converter Recursos (<code>.qrc</code> → <code>.py</code>)</h3>
-<div class="highlight"><span class="filename">Converter ícones</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pyside6-rcc<span class="w"> </span>assets<span class="se">\q</span>rc_files<span class="se">\i</span>cons_.qrc<span class="w"> </span>-o<span class="w"> </span>src<span class="se">\u</span>i<span class="se">\i</span>cons_rc.py
+<div class="highlight"><span class="filename">Converter ícones</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pyside6-rcc<span class="w"> </span>assets<span class="se">\q</span>rc_files<span class="se">\i</span>cons_.qrc<span class="w"> </span>-o<span class="w"> </span>src<span class="se">\u</span>i<span class="se">\i</span>cons_rc.py
 </code></pre></div>
 <hr />
 <h2 id="arquitetura-da-interface">📐 Arquitetura da Interface</h2>
@@ -1222,29 +1350,42 @@
 <li>Configuração de layouts (grids, boxes)</li>
 <li>Propriedades visuais (tamanhos, estilos)</li>
 </ul>
-<div class="highlight"><span class="filename">src/ui/main_window_v1.py (gerado)</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Ui_MainWindow</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">MainWindow</span><span class="p">):</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        <span class="c1"># Criação de widgets</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">btn_home</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">()</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">btn_financeiro</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">()</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">Pages</span> <span class="o">=</span> <span class="n">QStackedWidget</span><span class="p">()</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="c1"># ...</span>
+<div class="highlight"><span class="filename">src/ui/main_window_movto_sinistro.py (gerado)</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Ui_MainWindow</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">MainWindow</span><span class="p">):</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        <span class="c1"># Criação de widgets — todas as 7 páginas</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">btn_home</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">()</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">btn_financeiro</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">()</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">btn_conciliacao</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">()</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">btn_consulta_item</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">()</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">btn_movto_sinistro</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">()</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">btn_contatos</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">()</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">btn_sobre</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">()</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">Pages</span> <span class="o">=</span> <span class="n">QStackedWidget</span><span class="p">()</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="c1"># ...</span>
 </code></pre></div>
 <h3 id="classe-mainwindow">Classe <code>MainWindow</code></h3>
-<p>Implementada manualmente. Herda da UI gerada e adiciona lógica.</p>
-<div class="highlight"><span class="filename">src/main.py</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ui.main_window_v1</span><span class="w"> </span><span class="kn">import</span> <span class="n">Ui_MainWindow</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">,</span> <span class="n">Ui_MainWindow</span><span class="p">):</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="nb">super</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>  <span class="c1"># Carrega a UI gerada</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        <span class="c1"># Configurações adicionais</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Kovr - Sistema de Relatórios&quot;</span><span class="p">)</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;:/icons/icons/logo_kovr2.png&quot;</span><span class="p">))</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        <span class="c1"># Conexão de sinais</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">btn_home</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Pages</span><span class="o">.</span><span class="n">setCurrentWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pg_home</span><span class="p">))</span>
+<p>Implementada manualmente em <code>src/main1.py</code>. Herda da UI gerada e adiciona lógica.</p>
+<div class="highlight"><span class="filename">src/main1.py</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ui.main_window_movto_sinistro</span><span class="w"> </span><span class="kn">import</span> <span class="n">Ui_MainWindow</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pages.financeiro</span><span class="w"> </span><span class="kn">import</span> <span class="n">Financeiro</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pages.conciliacao</span><span class="w"> </span><span class="kn">import</span> <span class="n">Conciliacao</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pages.consulta_apolice</span><span class="w"> </span><span class="kn">import</span> <span class="n">ConsultaApolice</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pages.movto_sinistro</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sinistro</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">,</span> <span class="n">Ui_MainWindow</span><span class="p">):</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>        <span class="nb">super</span><span class="p">(</span><span class="n">MainWindow</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>  <span class="c1"># Carrega a UI gerada</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Kovr - Sistema de geração de relatórios&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;:/icons/icons/logo_kovr2.png&quot;</span><span class="p">))</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">showMaximized</span><span class="p">()</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        <span class="c1"># Instancia os controladores das páginas</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">financeiro</span> <span class="o">=</span> <span class="n">Financeiro</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">conciliacao</span> <span class="o">=</span> <span class="n">Conciliacao</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">consulta_apolice</span> <span class="o">=</span> <span class="n">ConsultaApolice</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">sinistro</span> <span class="o">=</span> <span class="n">Sinistro</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 </code></pre></div>
 <hr />
 <h2 id="sistema-de-navegacao">🧭 Sistema de Navegação</h2>
@@ -1254,6 +1395,8 @@
         B1[btn_home]
         B2[btn_financeiro]
         B3[btn_conciliacao]
+        B6[btn_consulta_item]
+        B7[btn_movto_sinistro]
         B4[btn_contatos]
         B5[btn_sobre]
     end
@@ -1262,6 +1405,8 @@
         P1[pg_home]
         P2[pg_financeiro]
         P3[pg_conciliacao]
+        P6[pg_consulta_item]
+        P7[pg_movto_sinistro]
         P4[pg_contatos]
         P5[pg_sobre]
     end
@@ -1269,50 +1414,80 @@
     B1 --&gt;|clicked| P1
     B2 --&gt;|clicked| P2
     B3 --&gt;|clicked| P3
+    B6 --&gt;|clicked| P6
+    B7 --&gt;|clicked| P7
     B4 --&gt;|clicked| P4
     B5 --&gt;|clicked| P5</code></pre>
 <h3 id="codigo-de-navegacao">Código de Navegação</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Navegação principal</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="bp">self</span><span class="o">.</span><span class="n">btn_home</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Pages</span><span class="o">.</span><span class="n">setCurrentWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pg_home</span><span class="p">))</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="bp">self</span><span class="o">.</span><span class="n">btn_financeiro</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Pages</span><span class="o">.</span><span class="n">setCurrentWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pg_finaceiro</span><span class="p">))</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="bp">self</span><span class="o">.</span><span class="n">btn_conciliacao</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Pages</span><span class="o">.</span><span class="n">setCurrentWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pg_conciliacao</span><span class="p">))</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="bp">self</span><span class="o">.</span><span class="n">btn_contatos</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Pages</span><span class="o">.</span><span class="n">setCurrentWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pg_contatos</span><span class="p">))</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="bp">self</span><span class="o">.</span><span class="n">btn_sobre</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Pages</span><span class="o">.</span><span class="n">setCurrentWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pg_sobre</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Navegação principal</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="bp">self</span><span class="o">.</span><span class="n">btn_home</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Pages</span><span class="o">.</span><span class="n">setCurrentWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pg_home</span><span class="p">))</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="bp">self</span><span class="o">.</span><span class="n">btn_financeiro</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Pages</span><span class="o">.</span><span class="n">setCurrentWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pg_finaceiro</span><span class="p">))</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="bp">self</span><span class="o">.</span><span class="n">btn_conciliacao</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Pages</span><span class="o">.</span><span class="n">setCurrentWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pg_conciliacao</span><span class="p">))</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="bp">self</span><span class="o">.</span><span class="n">btn_contatos</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Pages</span><span class="o">.</span><span class="n">setCurrentWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pg_contatos</span><span class="p">))</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="bp">self</span><span class="o">.</span><span class="n">btn_sobre</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Pages</span><span class="o">.</span><span class="n">setCurrentWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pg_sobre</span><span class="p">))</span>
 </code></pre></div>
 <hr />
 <h2 id="menu-lateral-animado">🎭 Menu Lateral Animado</h2>
 <p>O menu lateral possui animação de expansão/contração.</p>
-<div class="highlight"><span class="filename">src/main.py</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">leftMenu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">menu_esquerdo</span><span class="o">.</span><span class="n">width</span><span class="p">()</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="n">newWidth</span> <span class="o">=</span> <span class="mi">200</span> <span class="k">if</span> <span class="n">width</span> <span class="o">==</span> <span class="mi">9</span> <span class="k">else</span> <span class="mi">9</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">animation</span> <span class="o">=</span> <span class="n">QPropertyAnimation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">menu_esquerdo</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;maximumWidth&quot;</span><span class="p">)</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="o">.</span><span class="n">setDuration</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="o">.</span><span class="n">setStartValue</span><span class="p">(</span><span class="n">width</span><span class="p">)</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="o">.</span><span class="n">setEndValue</span><span class="p">(</span><span class="n">newWidth</span><span class="p">)</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="o">.</span><span class="n">setEasingCurve</span><span class="p">(</span><span class="n">QEasingCurve</span><span class="o">.</span><span class="n">InOutQuart</span><span class="p">)</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<div class="highlight"><span class="filename">src/main.py</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">leftMenu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">menu_esquerdo</span><span class="o">.</span><span class="n">width</span><span class="p">()</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">newWidth</span> <span class="o">=</span> <span class="mi">200</span> <span class="k">if</span> <span class="n">width</span> <span class="o">==</span> <span class="mi">9</span> <span class="k">else</span> <span class="mi">9</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">animation</span> <span class="o">=</span> <span class="n">QPropertyAnimation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">menu_esquerdo</span><span class="p">,</span> <span class="sa">b</span><span class="s2">&quot;maximumWidth&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="o">.</span><span class="n">setDuration</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="o">.</span><span class="n">setStartValue</span><span class="p">(</span><span class="n">width</span><span class="p">)</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="o">.</span><span class="n">setEndValue</span><span class="p">(</span><span class="n">newWidth</span><span class="p">)</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="o">.</span><span class="n">setEasingCurve</span><span class="p">(</span><span class="n">QEasingCurve</span><span class="o">.</span><span class="n">InOutQuart</span><span class="p">)</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">animation</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 </code></pre></div>
 <hr />
 <h2 id="controle-de-permissoes-na-ui">🔐 Controle de Permissões na UI</h2>
 <p>Os botões de navegação são habilitados/desabilitados conforme as permissões do usuário.</p>
-<div class="highlight"><span class="filename">src/main.py</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">verificar_e_carregar_permissoes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">usuario_atual</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="n">paginas_interface</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        <span class="s1">&#39;home&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">btn_home</span><span class="p">,</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>        <span class="s1">&#39;financeiro&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">btn_financeiro</span><span class="p">,</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        <span class="s1">&#39;conciliacao&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">btn_conciliacao</span><span class="p">,</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        <span class="s1">&#39;contatos&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">btn_contatos</span><span class="p">,</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>        <span class="s1">&#39;sobre&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">btn_sobre</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="p">}</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="n">permissoes</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="n">obter_permissoes_usuario</span><span class="p">(</span><span class="n">usuario_atual</span><span class="p">)</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    <span class="k">for</span> <span class="n">nome_pagina</span><span class="p">,</span> <span class="n">botao</span> <span class="ow">in</span> <span class="n">paginas_interface</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>        <span class="n">estado</span> <span class="o">=</span> <span class="n">permissoes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">nome_pagina</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>        <span class="n">botao</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">estado</span><span class="p">)</span>  <span class="c1"># True = habilitado, False = desabilitado</span>
+<div class="highlight"><span class="filename">src/main.py</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">verificar_e_carregar_permissoes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">usuario_atual</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="n">paginas_interface</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>        <span class="s1">&#39;home&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">btn_home</span><span class="p">,</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        <span class="s1">&#39;financeiro&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">btn_financeiro</span><span class="p">,</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        <span class="s1">&#39;conciliacao&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">btn_conciliacao</span><span class="p">,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        <span class="s1">&#39;consulta_item&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">btn_consulta_item</span><span class="p">,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>        <span class="s1">&#39;movto_sinistro&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">btn_movto_sinistro</span><span class="p">,</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>        <span class="s1">&#39;contatos&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">btn_contatos</span><span class="p">,</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>        <span class="s1">&#39;sobre&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">btn_sobre</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="p">}</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="n">permissoes</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="n">obter_permissoes_usuario</span><span class="p">(</span><span class="n">usuario_atual</span><span class="p">)</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    <span class="k">for</span> <span class="n">nome_pagina</span><span class="p">,</span> <span class="n">botao</span> <span class="ow">in</span> <span class="n">paginas_interface</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>        <span class="n">estado</span> <span class="o">=</span> <span class="n">permissoes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">nome_pagina</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>        <span class="n">botao</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">estado</span><span class="p">)</span>  <span class="c1"># True = habilitado, False = desabilitado</span>
 </code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Sincronização com o banco</p>
+<p>O dicionário <code>paginas_interface</code> deve ter exatamente as mesmas chaves registradas na tabela de permissões do banco de dados. Se uma nova página for adicionada à UI, inclua-a aqui <strong>e</strong> cadastre-a no banco.
+Consulte <a href="../banco-de-dados/">Banco de Dados</a> para detalhes sobre a tabela de permissões.</p>
+</div>
+<hr />
+<h2 id="splashscreen">🖼️ SplashScreen</h2>
+<p>Uma tela de carregamento (<code>QSplashScreen</code>) é exibida enquanto a <code>MainWindow</code> inicializa.</p>
+<div class="highlight"><span class="filename">src/main1.py</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="n">splash_pix</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="s2">&quot;:/icons/icons/logo_kovr2.png&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">splash</span> <span class="o">=</span> <span class="n">QSplashScreen</span><span class="p">(</span><span class="n">splash_pix</span><span class="p">,</span> <span class="n">Qt</span><span class="o">.</span><span class="n">WindowStaysOnTopHint</span><span class="p">)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="n">splash</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="n">app</span><span class="o">.</span><span class="n">processEvents</span><span class="p">()</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    <span class="n">splash</span><span class="o">.</span><span class="n">finish</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">())</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Boas práticas</p>
+<p>A SplashScreen melhora a percepção de desempenho ao usuário enquanto os controladores de página, conexões de BD e threads são inicializados.</p>
+</div>
 <!-- ---
 
 ## 🖱️ Cursores Customizados
@@ -1337,12 +1512,12 @@ def eventFilter(self, obj, event):
 <h2 id="importante">⚠️ Importante</h2>
 <div class="admonition warning">
 <p class="admonition-title">Não edite arquivos gerados manualmente</p>
-<p>Os arquivos <code>main_window_v1.py</code> e <code>icons_rc.py</code> são <strong>gerados automaticamente</strong>.
-Qualquer alteração manual será perdida na próxima conversão.</p>
+<p>Os arquivos <code>main_window_movto_sinistro.py</code> e <code>icons_rc.py</code> são <strong>gerados automaticamente</strong>.
+Qualquer alteração manual será perdida na próxima conversão com <code>pyside6-uic</code>.</p>
 <p><strong>Onde fazer alterações:</strong></p>
 <ul>
 <li>Layout visual → Qt Designer (<code>.ui</code>)</li>
-<li>Lógica de negócio → <code>src/main.py</code> ou controladores em <code>src/pages/</code></li>
+<li>Lógica de negócio → <code>src/main1.py</code> ou controladores em <code>src/pages/</code></li>
 </ul>
 </div>
 

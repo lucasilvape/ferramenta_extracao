@@ -481,10 +481,21 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fluxo-de-importacao-movto-sinistro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        � Fluxo de Importação — Movto Sinistro
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#comecando" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚦 Começando
+        �🚦 Começando
       
     </span>
   </a>
@@ -726,6 +737,118 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guia-tecnico/financeiro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Financeiro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guia-tecnico/conciliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conciliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guia-tecnico/consulta-item/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consulta Item
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guia-tecnico/movto-sinistro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Movto Sinistro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -920,10 +1043,21 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fluxo-de-importacao-movto-sinistro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        � Fluxo de Importação — Movto Sinistro
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#comecando" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚦 Começando
+        �🚦 Começando
       
     </span>
   </a>
@@ -968,7 +1102,7 @@
 <p>Cada uma dessas solicitações se tornava um <strong>chamado técnico</strong>, entrando na fila da equipe de Dados/TI. O resultado? <strong>Dias de espera</strong> para informações que deveriam estar na ponta dos dedos.</p>
 <hr />
 <h2 id="a-solucao-self-service-bi">💡 A Solução: Self-Service BI</h2>
-<p>A <strong>Ferramenta de Extração de Relatórios</strong> é uma aplicação desktop que coloca o poder dos dados diretamente nas mãos dos usuários de negócio.</p>
+<p>A <strong>Ferramenta de Extração de Relatórios</strong> é uma aplicação desktop que coloca o poder dos dados diretamente nas mãos dos usuários de negócio — tanto para <strong>extrair</strong> relatórios do banco quanto para <strong>importar</strong> dados estruturados de volta ao sistema, com validação automática de layout.</p>
 <pre class="mermaid"><code>flowchart LR
     subgraph ANTES["❌ Antes"]
         A[Usuário] --&gt;|Abre chamado| B[Fila de TI]
@@ -986,6 +1120,7 @@
 <!-- - :chart_with_downwards_trend: **-80% Chamados** — Redução drástica de tickets para a equipe técnica --></li>
 <li><img alt="⚡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a1.svg" title=":zap:" /> <strong>Dados em Tempo Real</strong> — Consultas diretas ao Data Warehouse</li>
 <li><img alt="🔒" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f512.svg" title=":lock:" /> <strong>Controle de Acesso</strong> — Sistema de permissões por página/usuário</li>
+<li><img alt="📥" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4e5.svg" title=":inbox_tray:" /> <strong>Importação Estruturada</strong> — Movimentos de sinistro validados com segurança</li>
 </ul>
 </div>
 <hr />
@@ -1010,6 +1145,14 @@
 <tr>
 <td><strong>Conciliação</strong></td>
 <td>Cruzamento automatizado de dados internos vs. arquivos de parceiros (Cyber)</td>
+</tr>
+<tr>
+<td><strong>Consulta Item</strong></td>
+<td>Consulta por número de bilhete ou CPF/CNPJ via API externa</td>
+</tr>
+<tr>
+<td><strong>Movto Sinistro</strong></td>
+<td>Importação de movimentos de sinistro (Pagamento, Ajuste, Cancelamento)</td>
 </tr>
 <tr>
 <td><strong>Contatos</strong></td>
@@ -1051,11 +1194,54 @@
     UI --&gt; EXCEL
     UI --&gt; CSV</code></pre>
 <hr />
-<h2 id="comecando">🚦 Começando</h2>
+<h2 id="fluxo-de-importacao-movto-sinistro">� Fluxo de Importação — Movto Sinistro</h2>
+<p>Além da extração, a ferramenta suporta o fluxo <strong>inverso</strong>: o usuário preenche um layout padronizado e importa movimentos de sinistro diretamente para o banco, passando por validação automática de colunas e regras de negócio.</p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph INPUT["📂 Entrada do Usuário"]
+        A[Exportar Layout .xlsx]
+        B[Preencher dados]
+        C[Importar arquivo]
+    end
+
+    subgraph APP["🖥️ Aplicação"]
+        D[Validação de colunas]
+        E[SinistroThread]
+        F[validacao_movto_sinistro.py]
+    end
+
+    subgraph BANCO["🗄️ Banco de Dados"]
+        G[(SQL Server&lt;br&gt;PRODUCAO / HOMOLOGACAO)]
+    end
+
+    A --&gt; B --&gt; C --&gt; D --&gt; E --&gt; F --&gt; G</code></pre>
+<table>
+<thead>
+<tr>
+<th>Tipo de Movimento</th>
+<th>Sheets do Layout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pagamento</strong></td>
+<td><code>layout</code>, <code>tipo_pagamentos</code>, <code>favorecidos</code>, <code>eventos</code>, <code>tp_chave_pix</code>, <code>tipo_documento_fiscal</code>, <code>reserva_cobertura</code></td>
+</tr>
+<tr>
+<td><strong>Ajuste</strong></td>
+<td><code>layout</code>, <code>eventos</code>, <code>cobertura</code></td>
+</tr>
+<tr>
+<td><strong>Cancelamento</strong></td>
+<td><code>layout</code>, <code>eventos</code>, <code>motivo_canc</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="comecando">�🚦 Começando</h2>
 <div class="admonition tip">
 <p class="admonition-title">Instalação Rápida</p>
 <p>Para usuários finais, basta executar o arquivo <code>.exe</code> disponível na pasta de rede:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>\\AWSSEG130006\ferramenta_extracao\Sistema de Relatorios v1.0.1.exe
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>\\AWSSEG130006\ferramenta_extracao\Sistema de Relatorios v1.0.3.exe
 </code></pre></div>
 </div>
 <p>Para desenvolvedores, consulte o <a href="guia-tecnico/banco-de-dados/">Guia de Configuração do Ambiente</a>.</p>
