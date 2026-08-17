@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../banco-de-dados/">
+        <link rel="prev" href="../movto-sinistro/">
       
       
-        <link rel="next" href="../interface-ui/">
+        <link rel="next" href="../../operacao/compilacao/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Processamento & Threads - Ferramenta de Extração de Relatórios</title>
+        <title>Portal Administrativo (Web) - Ferramenta de Extração de Relatórios</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#processamento-threads" class="md-skip">
+        <a href="#portal-administrativo-web-portal_admin" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Processamento & Threads
+              Portal Administrativo (Web)
             
           </span>
         </div>
@@ -577,37 +577,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Processamento & Threads
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../processamento-e-threads/" class="md-nav__link">
         
   
   
@@ -623,193 +596,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#por-que-usar-threads" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🧵 Por que usar Threads?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#threads-disponiveis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📋 Threads Disponíveis
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📋 Threads Disponíveis">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-versaothread" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. VersaoThread
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-carregarprodutosconcthread" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. CarregarProdutosConcThread
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-carregamentoarquivosthread" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. CarregamentoArquivosThread
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-consultathread" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. ConsultaThread
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-relatoriothread" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. RelatorioThread
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-conciliacaothread" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. ConciliacaoThread ⭐
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. ConciliacaoThread ⭐">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pipeline-de-execucao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pipeline de Execução
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-consultaapolicethread" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. ConsultaApoliceThread
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="7. ConsultaApoliceThread">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#etapas-de-execucao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Etapas de Execução
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-sinistrothread" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. SinistroThread
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="8. SinistroThread">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#logica-de-execucao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lógica de Execução
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -959,10 +745,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../portal-admin/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portal Administrativo (Web)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -978,6 +791,109 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#proposta-funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Proposta &amp; Funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura-do-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Arquitetura do Portal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-executar-o-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Como Executar o Portal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Como Executar o Portal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opcao-1-via-script-batch-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opção 1: Via Script Batch (Windows)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcao-2-via-terminal-uvicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opção 2: Via Terminal (Uvicorn)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perfis-de-acesso-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔐 Perfis de Acesso &amp; Segurança
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principais-endpoints-da-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📡 Principais Endpoints da API
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1133,10 +1049,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#por-que-usar-threads" class="md-nav__link">
+  <a href="#proposta-funcionalidades" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧵 Por que usar Threads?
+        🎯 Proposta &amp; Funcionalidades
       
     </span>
   </a>
@@ -1144,22 +1060,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#threads-disponiveis" class="md-nav__link">
+  <a href="#arquitetura-do-portal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📋 Threads Disponíveis
+        🏗️ Arquitetura do Portal
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📋 Threads Disponíveis">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-executar-o-portal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Como Executar o Portal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Como Executar o Portal">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-versaothread" class="md-nav__link">
+  <a href="#opcao-1-via-script-batch-windows" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. VersaoThread
+        Opção 1: Via Script Batch (Windows)
       
     </span>
   </a>
@@ -1167,66 +1094,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-carregarprodutosconcthread" class="md-nav__link">
+  <a href="#opcao-2-via-terminal-uvicorn" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. CarregarProdutosConcThread
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-carregamentoarquivosthread" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. CarregamentoArquivosThread
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-consultathread" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. ConsultaThread
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-relatoriothread" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. RelatorioThread
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-conciliacaothread" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. ConciliacaoThread ⭐
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. ConciliacaoThread ⭐">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pipeline-de-execucao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pipeline de Execução
+        Opção 2: Via Terminal (Uvicorn)
       
     </span>
   </a>
@@ -1237,65 +1108,26 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#7-consultaapolicethread" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#perfis-de-acesso-seguranca" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. ConsultaApoliceThread
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="7. ConsultaApoliceThread">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#etapas-de-execucao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Etapas de Execução
+        🔐 Perfis de Acesso &amp; Segurança
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-sinistrothread" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#principais-endpoints-da-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. SinistroThread
+        📡 Principais Endpoints da API
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="8. SinistroThread">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#logica-de-execucao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lógica de Execução
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1319,439 +1151,135 @@
   
 
 
-<h1 id="processamento-threads">⚡ Processamento &amp; Threads</h1>
-<p>O uso de <strong>QThreads</strong> é fundamental para manter a interface responsiva durante operações pesadas de I/O e processamento.</p>
+<h1 id="portal-administrativo-web-portal_admin">🌐 Portal Administrativo Web (<code>portal_admin</code>)</h1>
+<p>O <strong>Portal Administrativo</strong> é uma aplicação web corporativa desenvolvida em <strong>FastAPI</strong> e <strong>Chart.js</strong> para fornecer governança, auditoria em tempo real, monitoramento operacional e controle de acessos da Ferramenta de Relatórios.</p>
 <hr />
-<h2 id="por-que-usar-threads">🧵 Por que usar Threads?</h2>
-<div class="admonition warning">
-<p class="admonition-title">O Problema do Congelamento</p>
-<p>Sem threads, uma query que demora 30 segundos <strong>travaria completamente</strong> a interface, impedindo o usuário de cancelar ou interagir com a aplicação.</p>
-</div>
-<pre class="mermaid"><code>flowchart LR
-    subgraph SEM_THREAD["❌ Sem Thread"]
-        A1[Clique no botão] --&gt; B1[Query executando...]
-        B1 --&gt; C1[Interface TRAVADA]
-        C1 --&gt; D1[30s depois: Resultado]
+<h2 id="proposta-funcionalidades">🎯 Proposta &amp; Funcionalidades</h2>
+<p>O portal complementa a aplicação desktop, oferecendo uma central de controle para gestores e administradores de TI/Dados:</p>
+<ul>
+<li>📊 <strong>Centro de Comando:</strong> Visão geral com total de analistas, permissões ativas, volume de operações, versão em produção e feed de atividades em tempo real.</li>
+<li>👥 <strong>Gestão de Permissões (RBAC):</strong> Controle de quais páginas do aplicativo desktop cada analista pode acessar.</li>
+<li>💰 <strong>Gestão de Alçadas &amp; Homologação:</strong> Configuração de teto financeiro para pagamentos de sinistros e liberação do ambiente de testes do i4Pro.</li>
+<li>📜 <strong>Monitoramento de Sinistros:</strong> Acompanhamento de transações de pagamentos, ajustes e cancelamentos, com detalhamento de erros e rejeições do i4Pro.</li>
+<li>📈 <strong>Auditoria &amp; Telemetria:</strong> Métricas de tempo médio de execução por módulo, ranking de utilização por analista e gráficos interativos.</li>
+<li>🏷️ <strong>Controle de Versão Global:</strong> Publicação de novas versões no banco de dados para sincronização obrigatória dos executáveis desktop.</li>
+<li>🌓 <strong>Suporte a Dark / Light Mode:</strong> Alternância de temas com alto contraste e paleta oficial Kev.</li>
+<li>🛡️ <strong>Confirmação Prévia de Ações:</strong> Modais de confirmação para todas as mutações administrativas no banco.</li>
+</ul>
+<hr />
+<h2 id="arquitetura-do-portal">🏗️ Arquitetura do Portal</h2>
+<pre class="mermaid"><code>flowchart TD
+    subgraph FRONTEND["🖥️ Front-End (Web)"]
+        UI["HTML5 + Vanilla CSS + JavaScript"]
+        CHART["Chart.js (Gráficos Interativos)"]
+        THEME["Dark / Light Engine"]
     end
 
-    subgraph COM_THREAD["✅ Com Thread"]
-        A2[Clique no botão] --&gt; B2[Thread inicia]
-        B2 --&gt; C2[Interface LIVRE]
-        C2 --&gt; D2[Progress bar atualiza]
-        D2 --&gt; E2[Sinal emitido: Resultado]
-    end</code></pre>
+    subgraph BACKEND["⚡ Back-End (FastAPI)"]
+        API["FastAPI App (portal_admin/app.py)"]
+        AUTH["Sessão &amp; Tokens de Autenticação"]
+        CORS["CORS &amp; Middlewares"]
+    end
+
+    subgraph DATABASE["🗄️ Camada de Dados"]
+        DB["src/core/database.py"]
+        SQL[(SQL Server DW BI &amp; Logs)]
+    end
+
+    UI --&gt; API
+    CHART --&gt; API
+    THEME --&gt; UI
+    API --&gt; AUTH
+    API --&gt; DB
+    DB --&gt; SQL</code></pre>
 <hr />
-<h2 id="threads-disponiveis">📋 Threads Disponíveis</h2>
-<p>Todas as threads estão localizadas em <code>src/core/threads.py</code>.</p>
-<h3 id="1-versaothread">1. <code>VersaoThread</code></h3>
-<p>Verifica se há uma versão mais recente do sistema.</p>
-<table>
-<thead>
-<tr>
-<th>Aspecto</th>
-<th>Valor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Localização</strong></td>
-<td><code>src/main.py</code></td>
-</tr>
-<tr>
-<td><strong>Sinal</strong></td>
-<td><code>versao_desatualizada(str, str)</code></td>
-</tr>
-<tr>
-<td><strong>Execução</strong></td>
-<td>Automática ao iniciar a aplicação</td>
-</tr>
-</tbody>
-</table>
-<div class="highlight"><span class="filename">src/main.py</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">VersaoThread</span><span class="p">(</span><span class="n">QThread</span><span class="p">):</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">versao_desatualizada</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>  <span class="c1"># versão_interface, versão_banco</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="n">versao_banco</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="n">consultar_versao_sistema</span><span class="p">()</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="k">if</span> <span class="n">versao_banco</span> <span class="ow">and</span> <span class="n">versao_banco</span> <span class="o">!=</span> <span class="n">VERSAO_INTERFACE</span><span class="p">:</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">versao_desatualizada</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">VERSAO_INTERFACE</span><span class="p">,</span> <span class="n">versao_banco</span><span class="p">)</span>
+<h2 id="como-executar-o-portal">🚀 Como Executar o Portal</h2>
+<h3 id="opcao-1-via-script-batch-windows">Opção 1: Via Script Batch (Windows)</h3>
+<p>Basta dar um duplo clique no arquivo:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>portal_admin<span class="se">\r</span>un_admin.bat
+</code></pre></div></p>
+<h3 id="opcao-2-via-terminal-uvicorn">Opção 2: Via Terminal (Uvicorn)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>portal_admin
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>uvicorn<span class="w"> </span>app:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">3000</span><span class="w"> </span>--reload
 </code></pre></div>
+<p>Acesse no navegador: <strong><code>http://localhost:3000</code></strong></p>
 <hr />
-<h3 id="2-carregarprodutosconcthread">2. <code>CarregarProdutosConcThread</code></h3>
-<p>Carrega a lista de produtos disponíveis para conciliação.</p>
+<h2 id="perfis-de-acesso-seguranca">🔐 Perfis de Acesso &amp; Segurança</h2>
+<p>O portal conta com dois níveis de perfil:</p>
 <table>
 <thead>
 <tr>
-<th>Aspecto</th>
-<th>Valor</th>
+<th style="text-align: left;">Perfil</th>
+<th style="text-align: left;">Nível</th>
+<th style="text-align: left;">Permissões</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Sinais</strong></td>
-<td><code>finished(list)</code>, <code>error(str)</code></td>
+<td style="text-align: left;"><strong>👑 Administrador (<code>admin</code>)</strong></td>
+<td style="text-align: left;">Total</td>
+<td style="text-align: left;">Acesso a todas as telas, alteração de permissões, alçadas, homologação, publicação de versões e gestão de usuários do portal.</td>
 </tr>
 <tr>
-<td><strong>Uso</strong></td>
-<td>Página de Conciliação</td>
+<td style="text-align: left;"><strong>👁️ Consulta (<code>viewer</code>)</strong></td>
+<td style="text-align: left;">Leitura</td>
+<td style="text-align: left;">Visualização de dashboards, auditoria, logs e relatórios, com bloqueio de ações de escrita/exclusão.</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>Ver controlador completo em <a href="../conciliacao/">Conciliação</a>.</p>
-</blockquote>
 <hr />
-<h3 id="3-carregamentoarquivosthread">3. <code>CarregamentoArquivosThread</code></h3>
-<p>Lê arquivos Excel/CSV enviados pelo usuário.</p>
+<h2 id="principais-endpoints-da-api">📡 Principais Endpoints da API</h2>
 <table>
 <thead>
 <tr>
-<th>Aspecto</th>
-<th>Valor</th>
+<th style="text-align: left;">Método</th>
+<th style="text-align: left;">Rota</th>
+<th style="text-align: left;">Descrição</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Sinais</strong></td>
-<td><code>finished(DataFrame, str)</code>, <code>error(str)</code>, <code>status(str)</code></td>
+<td style="text-align: left;"><code>GET</code></td>
+<td style="text-align: left;"><code>/api/centro-comando</code></td>
+<td style="text-align: left;">Métricas agregadas e feed de últimas atividades</td>
 </tr>
 <tr>
-<td><strong>Uso</strong></td>
-<td>Upload de arquivos do parceiro</td>
+<td style="text-align: left;"><code>GET</code></td>
+<td style="text-align: left;"><code>/api/usuarios</code></td>
+<td style="text-align: left;">Lista de analistas e permissões de páginas</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>POST</code></td>
+<td style="text-align: left;"><code>/api/permissoes/atualizar</code></td>
+<td style="text-align: left;">Liga/desliga permissão de página para um analista</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>POST</code></td>
+<td style="text-align: left;"><code>/api/alcada/atualizar</code></td>
+<td style="text-align: left;">Atualiza o teto monetário de alçada</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>POST</code></td>
+<td style="text-align: left;"><code>/api/homolog/atualizar</code></td>
+<td style="text-align: left;">Libera/bloqueia acesso ao ambiente de homologação</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>GET</code></td>
+<td style="text-align: left;"><code>/api/logs</code></td>
+<td style="text-align: left;">Logs paginados de sinistros (pagamentos, ajustes, cancelamentos)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>GET</code></td>
+<td style="text-align: left;"><code>/api/auditoria/metricas</code></td>
+<td style="text-align: left;">Histórico e métricas agregadas de auditoria e tempo de resposta</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>GET/POST</code></td>
+<td style="text-align: left;"><code>/api/versao</code></td>
+<td style="text-align: left;">Consulta ou publica nova versão global do sistema</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition info">
-<p class="admonition-title">Validação de Competência</p>
-<p>Esta thread valida se o período do arquivo corresponde à competência selecionada pelo usuário.</p>
-</div>
-<blockquote>
-<p>Ver controlador completo em <a href="../conciliacao/">Conciliação</a>.</p>
-</blockquote>
-<hr />
-<h3 id="4-consultathread">4. <code>ConsultaThread</code></h3>
-<p>Busca bilhetes por filtro específico.</p>
-<table>
-<thead>
-<tr>
-<th>Aspecto</th>
-<th>Valor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Sinais</strong></td>
-<td><code>finished(df_lotecap, df_recorrencia)</code>, <code>error(str)</code></td>
-</tr>
-<tr>
-<td><strong>Filtros</strong></td>
-<td><code>bilhete</code>, <code>uuid_bilhete</code>, <code>uuid_parcela</code></td>
-</tr>
-<tr>
-<td><strong>Uso</strong></td>
-<td>Consulta individual na página Financeiro</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Ver controlador completo em <a href="../financeiro/">Financeiro</a>.</p>
-</blockquote>
-<hr />
-<h3 id="5-relatoriothread">5. <code>RelatorioThread</code></h3>
-<p>Gera relatórios completos (LoteCap ou Recorrência).</p>
-<table>
-<thead>
-<tr>
-<th>Aspecto</th>
-<th>Valor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Sinais</strong></td>
-<td><code>finished(list)</code>, <code>error(str)</code></td>
-</tr>
-<tr>
-<td><strong>Saída</strong></td>
-<td>Lista de arquivos CSV gerados</td>
-</tr>
-</tbody>
-</table>
-<pre class="mermaid"><code>flowchart TD
-    START[Usuário clica em Gerar] --&gt; THREAD[ReportThread.start]
-    THREAD --&gt; QUERY[Executa query no banco]
-    QUERY --&gt; CHECK{Linhas &gt; 700.000?}
-    CHECK --&gt;|Sim| CHUNK[Divide em múltiplos CSVs]
-    CHECK --&gt;|Não| SINGLE[Gera CSV único]
-    CHUNK --&gt; SIGNAL[Emite finished]
-    SINGLE --&gt; SIGNAL
-    SIGNAL --&gt; UI[Interface recebe lista de arquivos]</code></pre>
-<blockquote>
-<p>Ver controlador completo em <a href="../financeiro/">Financeiro</a>.</p>
-</blockquote>
-<hr />
-<h3 id="6-conciliacaothread">6. <code>ConciliacaoThread</code> ⭐</h3>
-<p>A thread mais complexa do sistema. Executa o <strong>pipeline completo de conciliação</strong>.</p>
-<table>
-<thead>
-<tr>
-<th>Aspecto</th>
-<th>Valor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Sinais</strong></td>
-<td><code>finished(str)</code>, <code>error(str)</code></td>
-</tr>
-<tr>
-<td><strong>Tempo médio</strong></td>
-<td>2-5 minutos</td>
-</tr>
-</tbody>
-</table>
-<h4 id="pipeline-de-execucao">Pipeline de Execução</h4>
-<pre class="mermaid"><code>flowchart TD
-    A[1. obter_parametros] --&gt; B[2. relatorio_pagamentos_postgres]
-    B --&gt; C[3. ler_arquivo_parceiro]
-    C --&gt; D[4. padronizar_dados]
-    D --&gt; E[5. cruzar_bases]
-    E --&gt; F[6. enriquecer_dados]
-    F --&gt; G[7. investigar_bilhetes]
-    G --&gt; H[8. gerar_relatorio_final]
-    H --&gt; I[9. salvar_resultado]
-
-    style A fill:#e1f5fe
-    style I fill:#c8e6c9</code></pre>
-<table>
-<thead>
-<tr>
-<th>Etapa</th>
-<th>Função</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td><code>obter_parametros</code></td>
-<td>Busca configurações do produto selecionado</td>
-</tr>
-<tr>
-<td>2</td>
-<td><code>relatorio_pagamentos_postgres</code></td>
-<td>Extrai pagamentos do PostgreSQL</td>
-</tr>
-<tr>
-<td>3</td>
-<td><code>ler_arquivo_parceiro</code></td>
-<td>Carrega arquivos externos (Excel/CSV)</td>
-</tr>
-<tr>
-<td>4</td>
-<td><code>padronizar_dados</code></td>
-<td>Normaliza colunas e tipos de dados</td>
-</tr>
-<tr>
-<td>5</td>
-<td><code>cruzar_bases</code></td>
-<td>Faz o merge entre base interna e externa</td>
-</tr>
-<tr>
-<td>6</td>
-<td><code>enriquecer_dados</code></td>
-<td>Adiciona informações complementares</td>
-</tr>
-<tr>
-<td>7</td>
-<td><code>investigar_bilhetes</code></td>
-<td>Busca bilhetes não encontrados</td>
-</tr>
-<tr>
-<td>8</td>
-<td><code>gerar_relatorio_final</code></td>
-<td>Consolida resultados</td>
-</tr>
-<tr>
-<td>9</td>
-<td><code>salvar_resultado</code></td>
-<td>Exporta para pasta Downloads</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Ver controlador completo em <a href="../conciliacao/">Conciliação</a>.</p>
-</blockquote>
-<hr />
-<h3 id="7-consultaapolicethread">7. <code>ConsultaApoliceThread</code></h3>
-<p>Realiza a consulta à API de apólices sem travar a interface.</p>
-<table>
-<thead>
-<tr>
-<th>Aspecto</th>
-<th>Valor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Sinais</strong></td>
-<td><code>finished(DataFrame)</code>, <code>erro(str)</code>, <code>progresso(int)</code></td>
-</tr>
-<tr>
-<td><strong>Parâmetros</strong></td>
-<td><code>bilhete</code>, <code>cpf</code>, <code>ambiente</code> (<code>homolog</code> | <code>prod</code>)</td>
-</tr>
-<tr>
-<td><strong>Uso</strong></td>
-<td>Página de Consulta de Apólices</td>
-</tr>
-</tbody>
-</table>
-<h4 id="etapas-de-execucao">Etapas de Execução</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Progresso</th>
-<th>Etapa</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><code>25</code></td>
-<td>Requisição à API via <code>consultar_api_apolice()</code></td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>75</code></td>
-<td>Processamento da resposta via <code>processar_resposta_apolice()</code></td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>100</code></td>
-<td>Emissão do sinal <code>finished(df_final)</code></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition info">
-<p class="admonition-title">Sinal <code>progresso</code></p>
-<p>O sinal <code>progresso(int)</code> é conectado ao label do <code>QProgressDialog</code>, exibindo mensagens como "Fazendo requisição à API..." e "Processando dados..." conforme a etapa avança.</p>
-</div>
-<blockquote>
-<p>Ver controlador completo em <a href="../consulta-item/">Consulta Item</a>.</p>
-</blockquote>
-<hr />
-<h3 id="8-sinistrothread">8. <code>SinistroThread</code></h3>
-<p>Executa todas as validações e a importação de movimentos de sinistro.</p>
-<table>
-<thead>
-<tr>
-<th>Aspecto</th>
-<th>Valor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Sinais</strong></td>
-<td><code>finished(str)</code>, <code>erro(str)</code></td>
-</tr>
-<tr>
-<td><strong>Parâmetros</strong></td>
-<td><code>df</code>, <code>tipo_importacao</code> (int), <code>ambiente</code> (str), <code>valor_alcada</code> (float)</td>
-</tr>
-<tr>
-<td><strong>Uso</strong></td>
-<td>Página de Movto Sinistro</td>
-</tr>
-</tbody>
-</table>
-<h4 id="logica-de-execucao">Lógica de Execução</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">ok</span><span class="p">,</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">validacao</span><span class="o">.</span><span class="n">executar_validacoes</span><span class="p">(</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">tipo_importacao</span><span class="p">,</span>   <span class="c1"># 1=Pagamento, 2=Ajuste, 3=Cancelamento</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">ambiente</span><span class="p">,</span>          <span class="c1"># &quot;PRODUCAO_i4&quot; ou &quot;HOMOLOGACAO_i4&quot;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">valor_alcada</span>       <span class="c1"># padrão: 9.999.999,99</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">)</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">if</span> <span class="n">ok</span><span class="p">:</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">finished</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">erro</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Validação centralizada</p>
-<p>Toda a lógica de validação está encapsulada em <code>validacao.executar_validacoes()</code> no módulo <code>src/core/validacao_movto_sinistro.py</code>. A thread apenas orquestra a chamada e repassa o resultado via sinais.</p>
-</div>
-<blockquote>
-<p>Ver controlador completo em <a href="../movto-sinistro/">Movto Sinistro</a>.</p>
-</blockquote>
-<!-- 
----
-
-## 🔗 Conexão Signals & Slots
-
-O padrão utilizado para comunicação entre threads e interface:
-
-```python title="Exemplo de conexão"
-# Na classe do controlador (ex: Financeiro)
-def __init__(self, main_window):
-    self.main = main_window
-
-    # Instancia a thread
-    self.report_thread = ReportThread()
-
-    # Conecta sinais aos slots
-    self.report_thread.finished.connect(self.on_report_finished)
-    self.report_thread.error.connect(self.on_report_error)
-
-def gerar_relatorio(self):
-    # Configura parâmetros
-    self.report_thread.tipo = 'Recorrência'
-    self.report_thread.produto = 'CYBER'
-    self.report_thread.competencia = '202501'
-
-    # Desabilita botão e mostra progress
-    self.main.btn_gerar_relatorio.setEnabled(False)
-    self.main.progress_bar.setVisible(True)
-
-    # Inicia a thread
-    self.report_thread.start()
-
-def on_report_finished(self, arquivos):
-    # Reabilita interface
-    self.main.btn_gerar_relatorio.setEnabled(True)
-    self.main.progress_bar.setVisible(False)
-
-    # Mostra resultado
-    self.main.mostrar_mensagem_customizada(
-        "information",
-        "Sucesso",
-        f"Relatório gerado: {arquivos}"
-    )
-``` -->
-
-<hr />
-<!-- ## ⚠️ Boas Práticas
-
-!!! tip "Nunca acesse widgets diretamente na thread"
-    Sempre use **Signals** para comunicar resultados da thread para a interface.
-
-    ```python
-    # ❌ ERRADO - Pode causar crash
-    def run(self):
-        self.main_window.label.setText("Processando...")
-
-    # ✅ CORRETO - Usa signal
-    def run(self):
-        self.status.emit("Processando...")
-    ```
-
-!!! warning "Sempre trate exceções"
-    Erros não tratados em threads podem passar despercebidos.
-
-    ```python
-    def run(self):
-        try:
-            resultado = self.processar()
-            self.finished.emit(resultado)
-        except Exception as e:
-            self.error.emit(str(e))
-    ``` -->
 
 
 
